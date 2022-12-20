@@ -31,11 +31,14 @@ int main(int argc, char *argv[])
 {
 	int rc;
 	rc = lcd1602Init(0, 0x3f);
-	lcd1602Clear();
 	if (rc) {
-					printf("Initialization failed; aborting...\n");
-					return 0;
+		printf("Initialization failed; aborting...\n");
+		return 0;
+	} else {
+		printf("Initialization success\n");
 	}
+	usleep(5000000);
+	lcd1602Clear();
 	int time = 0;
 
 	while (time < 100) {
