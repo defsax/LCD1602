@@ -43,15 +43,15 @@ int main(int argc, char *argv[])
 	int time = 0;
 
 	while (time < 100) {
-		lcd1602Clear();
 		usleep(30000);
-		printf("%d ", time);
+		lcd1602Clear();
+		// printf("%d ", time);
 		int length = snprintf(NULL, 0, "%d", time);
 		// printf("%d ", length);
 		char *str = malloc(length + 1);
 		snprintf(str, length + 1, "%d", time);
 		lcd1602WriteString(str);
-		// printf("%s", str);
+		printf("%s", str);
 		free(str);
 		fflush(stdout);
 		// sprintf("", "%i", time);
