@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 		// lcd1602WriteString(str);
 		// printf("%s", str);
 		// free(str);
-		// fflush(stdout);
+		fflush(stdout);
 		// sprintf("", "%i", time);
 		time++;
 	}
