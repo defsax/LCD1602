@@ -38,7 +38,7 @@ int rc;
         }
         int time = 0;
         while (time < 100){
-                usleep(300000);
+                // usleep(30000);
                 lcd1602Clear();
                 printf("%d ", time);
                 // int length = snprintf(NULL, 0, "%d", time);
@@ -53,7 +53,7 @@ int rc;
                 time++;
         }
 
-        lcd1602WriteString("Fuck ♥ yar !!!");
+        lcd1602WriteString("Fuck yar !!!");
         lcd1602SetCursor(0,1);
         lcd1602WriteString("ENTER to quit");
         lcd1602Control(1,0,1); // backlight on, underline off, blink block on 
