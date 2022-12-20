@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 		time++;
 	}
 
-	lcd1602WriteString("Fuck yar !!!");
+	// lcd1602WriteString("Fuck yar !!!");
 	lcd1602SetCursor(0,1);
 	lcd1602WriteString("ENTER to quit");
 	lcd1602Control(1,0,1); // backlight on, underline off, blink block on 
