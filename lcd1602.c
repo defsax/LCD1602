@@ -141,6 +141,7 @@ int i = 0;
 //
 int lcd1602Clear(void)
 {
+	printf("Clearing the screen\n");
 	if (file_i2c < 0)
 		return 1;
 	WriteCommand(0x0E); // clear the screen

@@ -37,22 +37,22 @@ int main(int argc, char *argv[])
 	} else {
 		printf("Initialization success\n");
 	}
-	usleep(5000000);
-	lcd1602SetCursor(0,0);
-	lcd1602Clear();
+	// usleep(5000000);
+	// lcd1602SetCursor(0,0);
+	// lcd1602Clear();
 	int time = 0;
 
 	while (time < 100) {
 		usleep(30000);
 		lcd1602Clear();
 		printf("%d ", time);
-		// int length = snprintf(NULL, 0, "%d", time);
+		int length = snprintf(NULL, 0, "%d", time);
 		// printf("%d ", length);
-		// char *str = malloc(length + 1);
-		// snprintf(str, length + 1, "%d", time);
-		// lcd1602WriteString(str);
+		char *str = malloc(length + 1);
+		snprintf(str, length + 1, "%d", time);
+		lcd1602WriteString(str);
 		// printf("%s", str);
-		// free(str);
+		free(str);
 		fflush(stdout);
 		// sprintf("", "%i", time);
 		time++;
