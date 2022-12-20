@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 		printf("Initialization success\n");
 	}
 	usleep(5000000);
+	lcd1602SetCursor(0,0);
 	lcd1602Clear();
 	int time = 0;
 

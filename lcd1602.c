@@ -56,20 +56,25 @@ unsigned char uc;
 	uc = (ucCMD & 0xf0) | iBackLight; // most significant nibble sent first
 	write(file_i2c, &uc, 1);
 	usleep(PULSE_PERIOD); // manually pulse the clock line
+	
 	uc |= 4; // enable pulse
 	write(file_i2c, &uc, 1);
 	usleep(PULSE_PERIOD);
+	
 	uc &= ~4; // toggle pulse
 	write(file_i2c, &uc, 1);
 	usleep(CMD_PERIOD);
+	
 	uc = iBackLight | (ucCMD << 4); // least significant nibble
 	write(file_i2c, &uc, 1);
 	usleep(PULSE_PERIOD);
-        uc |= 4; // enable pulse
-        write(file_i2c, &uc, 1);
-        usleep(PULSE_PERIOD);
-        uc &= ~4; // toggle pulse
-        write(file_i2c, &uc, 1);
+	
+	uc |= 4; // enable pulse
+	write(file_i2c, &uc, 1);
+	usleep(PULSE_PERIOD);
+	
+	uc &= ~4; // toggle pulse
+	write(file_i2c, &uc, 1);
 	usleep(CMD_PERIOD);
 
 } /* WriteCommand() */
