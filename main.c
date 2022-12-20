@@ -36,22 +36,22 @@ int rc;
                 printf("Initialization failed; aborting...\n");
                 return 0;
         }
-        // int time = 0;
-        // while (time < 100){
-        //         usleep(300000);
-        //         lcd1602Clear();
-        //         // printf("%d ", time);
-        //         int length = snprintf(NULL, 0, "%d", time);
-        //         // printf("%d ", length);
-        //         char *str = malloc(length + 1);
-        //         snprintf(str, length + 1, "%d", time);
-        //         lcd1602WriteString(str);
-        //         printf("%s", str);
-        //         free(str);
-        //         fflush(stdout);
-        //         // sprintf("", "%i", time);
-        //         time++;
-        // }
+        int time = 0;
+        while (time < 100){
+                usleep(300000);
+                lcd1602Clear();
+                printf("%d ", time);
+                // int length = snprintf(NULL, 0, "%d", time);
+                // printf("%d ", length);
+                // char *str = malloc(length + 1);
+                // snprintf(str, length + 1, "%d", time);
+                // lcd1602WriteString(str);
+                // printf("%s", str);
+                // free(str);
+                // fflush(stdout);
+                // sprintf("", "%i", time);
+                time++;
+        }
 
         lcd1602WriteString("Fuck ♥ yar !!!");
         lcd1602SetCursor(0,1);
