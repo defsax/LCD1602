@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	int time = 0;
 
 	while (time < 100) {
-		// usleep(30000);
+		usleep(30000);
 		lcd1602Clear();
 		printf("%d ", time);
 		// int length = snprintf(NULL, 0, "%d", time);
